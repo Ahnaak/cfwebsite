@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U&amp;I x Maho</title>
+<meta name="description" content="Mentorship, education and support for boys in residential care in Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      bg: "#0e0e0e", surface: "#1c1b1b", card: "#2a2a2a", field: "#353534",
+      text: "#e5e2e1", muted: "#ccc3d8", line: "#4a4455",
+      primary: "#d2bbff", brand: "#7c3aed", gold: "#f5bf34", "on-gold": "#3f2e00"
+    },
+    fontFamily: { sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"] }
+  } }
+};
+</script>
+</head>
+<body class="bg-bg text-text font-sans antialiased">
+
+<!-- Navbar -->
+<header class="fixed top-0 inset-x-0 z-50 bg-bg/85 backdrop-blur-xl border-b border-line/40">
+  <div class="max-w-7xl mx-auto h-20 px-4 lg:px-12 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="U&amp;I logo" class="h-12 w-auto" onerror="this.style.display='none'">
+      <span class="font-extrabold text-lg leading-tight">U&amp;I x Maho</span>
+    </a>
+    <nav id="nav" class="hidden xl:flex items-center gap-6 text-sm font-medium text-muted">
+      <a href="#what-is-maho" class="hover:text-text">About us</a>
+      <a href="#programs" class="hover:text-text">What we do</a>
+      <a href="#stories" class="hover:text-text">Sessions</a>
+      <a href="#student-testimonials" class="hover:text-text">Testimonials</a>
+      <a href="#question" class="hover:text-text">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" class="rounded-full bg-gold text-on-gold font-bold text-sm px-5 py-2 hover:brightness-110">Donate now</a>
+      <button id="menu-btn" class="xl:hidden p-2" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="hidden xl:hidden px-4 pb-4 flex-col gap-3 text-muted font-medium">
+    <a href="#what-is-maho">About us</a><a href="#programs">What we do</a><a href="#stories">Sessions</a><a href="#student-testimonials">Testimonials</a><a href="#question">Contact</a>
+  </nav>
+</header>
+
+<main id="top" class="pt-20">
+
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-4 lg:px-12 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">Nurturing potential in every boy at U&amp;I x Maho</h1>
+      <p class="mt-6 text-muted text-lg max-w-xl">Supporting boys in residential care with 1-on-1 mentorship, academic guidance, emotional resilience and a steady, caring presence.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#" class="rounded-xl bg-gold text-on-gold font-bold px-8 py-4 hover:brightness-110">Donate now</a>
+        <a href="#question" class="rounded-xl bg-card text-primary font-bold px-8 py-4 hover:bg-field">Ask a question</a>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden bg-card min-h-[320px] lg:min-h-[460px]">
+      <img src="images/hero.jpg" alt="A volunteer mentor working through a workbook with boys at the shelter home" class="w-full h-full min-h-[320px] lg:min-h-[460px] object-cover" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- What is Maho -->
+  <section id="what-is-maho" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12 grid lg:grid-cols-2 gap-12">
+      <h2 class="text-3xl lg:text-4xl font-bold leading-tight">What is Maho?</h2>
+      <div class="space-y-6 text-muted text-lg max-w-prose">
+        <p>U&amp;I is a volunteer-driven NGO transforming lives through education. We work with children from underserved communities, providing after-school learning support, life skills training, and career guidance to help them break the cycle of poverty.</p>
+        <p>Maho is a community-driven center under U&amp;I, dedicated to empowering underserved children through education and mentorship. We spend 3 hours a week providing quality after-school care, holistic development opportunities, and a nurturing environment to help the children realize their full potential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About + stats -->
+  <section id="about" class="bg-surface py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12 grid lg:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold leading-tight">Restoring trust and ambition to boys growing up in residential care</h2>
+        <p class="mt-6 text-muted max-w-prose">Boys in shelter care need more than tuition. They need steady male role models, space to talk about how they feel, friendships they can rely on, and a path to work. Vetted volunteers commit to weekly sessions inside the shelter, turning isolation into belonging.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-card rounded-xl p-6"><p class="text-4xl font-extrabold text-gold">45+</p><p class="font-semibold mt-2">Boys supported</p><p class="text-sm text-muted mt-1">In full-time shelter care</p></div>
+        <div class="bg-card rounded-xl p-6"><p class="text-4xl font-extrabold text-primary">100%</p><p class="font-semibold mt-2">1-on-1 mentorship</p><p class="text-sm text-muted mt-1">One mentor per boy</p></div>
+        <div class="bg-card rounded-xl p-6"><p class="text-4xl font-extrabold text-primary">3 hrs</p><p class="font-semibold mt-2">Weekly life skills</p><p class="text-sm text-muted mt-1">STEM labs, talks and sports</p></div>
+        <div class="bg-card rounded-xl p-6"><p class="text-4xl font-extrabold text-gold">8+ yrs</p><p class="font-semibold mt-2">Shelter support</p><p class="text-sm text-muted mt-1">Unbroken engagement</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12">
+      <h2 class="text-3xl lg:text-4xl font-bold">Holistic boy-child development</h2>
+      <p class="mt-4 text-muted max-w-prose">Three areas of work that help boys heal, learn and prepare for independent life.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <article class="bg-surface rounded-xl p-8 border border-line/50">
+          <h3 class="text-xl font-bold">Academic foundation and STEM</h3>
+          <p class="mt-3 text-muted">Closing literacy and numeracy gaps with hands-on science, circuit kits, computer basics and personal study plans.</p>
+        </article>
+        <article class="bg-surface rounded-xl p-8 border border-line/50">
+          <h3 class="text-xl font-bold">Emotional resilience and confidence</h3>
+          <p class="mt-3 text-muted">Safe, judgment-free sessions where boys learn to put feelings into words and support each other.</p>
+        </article>
+        <article class="bg-surface rounded-xl p-8 border border-line/50">
+          <h3 class="text-xl font-bold">Life skills and vocational readiness</h3>
+          <p class="mt-3 text-muted">Football, spoken English, budgeting and trade apprenticeships for older boys preparing to leave the shelter.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessions gallery -->
+  <section id="stories" class="bg-surface py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12">
+      <h2 class="text-3xl lg:text-4xl font-bold">Sessions at the shelter</h2>
+      <p class="mt-4 text-muted max-w-prose">Volunteers sit with boys one-on-one and in small groups every week.</p>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <figure class="rounded-xl overflow-hidden bg-card">
+          <img src="images/session-2.jpg" alt="A volunteer helping a boy with his work on the shelter steps" class="w-full h-72 lg:h-96 object-cover" loading="lazy">
+          <figcaption class="p-4 text-sm text-muted">One-on-one reading and writing practice</figcaption>
+        </figure>
+        <figure class="rounded-xl overflow-hidden bg-card">
+          <img src="images/session-3.jpg" alt="A volunteer working with boys on a workbook in the shelter courtyard" class="w-full h-72 lg:h-96 object-cover" loading="lazy">
+          <figcaption class="p-4 text-sm text-muted">Small-group study in the courtyard</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- What our students say -->
+  <section id="student-testimonials" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12">
+      <h2 class="text-3xl lg:text-4xl font-bold">What our students say</h2>
+      <p class="mt-4 text-muted max-w-prose">In their own words.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a student here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">S</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Class or grade</span></span>
+          </figcaption>
+        </figure>
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a student here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">S</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Class or grade</span></span>
+          </figcaption>
+        </figure>
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a student here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">S</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Class or grade</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- What our volunteers say -->
+  <section id="volunteer-testimonials" class="bg-surface py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 lg:px-12">
+      <h2 class="text-3xl lg:text-4xl font-bold">What our volunteers say</h2>
+      <p class="mt-4 text-muted max-w-prose">Why they show up every week.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a volunteer here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">V</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Years volunteering</span></span>
+          </figcaption>
+        </figure>
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a volunteer here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">V</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Years volunteering</span></span>
+          </figcaption>
+        </figure>
+        <figure class="bg-card rounded-xl p-6 flex flex-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="text-gold" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 3-2 4-4 4zm12 0c3 0 7-1 7-8V5h-7v8h4c0 3-2 4-4 4z"/></svg>
+          <blockquote class="mt-4 text-muted flex-1">Add a short quote from a volunteer here.</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3">
+            <span class="h-10 w-10 rounded-full bg-brand text-text font-bold flex items-center justify-center">V</span>
+            <span><span class="block font-semibold">Name</span><span class="block text-sm text-muted">Years volunteering</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask a question -->
+  <section id="question" class="py-16 lg:py-24">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="text-3xl lg:text-4xl font-bold text-center">Ask us a question</h2>
+      <p class="mt-4 text-muted text-center">About our work or anything else. We will reply by email.</p>
+      <form id="question-form" class="mt-10 flex flex-col gap-4">
+        <label class="sr-only" for="q-name">Your name</label>
+        <input id="q-name" required placeholder="Your name" class="w-full bg-field rounded-lg px-4 py-3 placeholder:text-muted/70 focus:outline-none focus:ring-2 focus:ring-brand">
+        <label class="sr-only" for="q-email">Email address</label>
+        <input id="q-email" type="email" required placeholder="Email address" class="w-full bg-field rounded-lg px-4 py-3 placeholder:text-muted/70 focus:outline-none focus:ring-2 focus:ring-brand">
+        <label class="sr-only" for="q-text">Your question</label>
+        <textarea id="q-text" rows="4" required placeholder="Type your question" class="w-full bg-field rounded-lg p-4 placeholder:text-muted/70 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
+        <button class="rounded-xl bg-gold text-on-gold font-bold py-4 hover:brightness-110">Send question</button>
+        <p class="form-status hidden text-center text-primary font-semibold" role="status">Thank you! We will reply to your question soon.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface border-t border-line/40 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <img src="images/logo.png" alt="U&amp;I, be the change" class="h-24 w-auto" onerror="this.style.display='none'">
+      <div class="mt-5 flex gap-4 text-text">
+        <a href="#" aria-label="Facebook" class="hover:text-gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="hover:text-gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="YouTube" class="hover:text-gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+      </div>
+      <p class="mt-5 text-sm text-muted max-w-xs">U&amp;I Trust is dedicated to transforming lives through education, empowerment, and volunteer-driven impact.</p>
+    </div>
+    <div>
+      <h3 class="text-gold font-bold text-lg">What we do</h3>
+      <ul class="mt-4 space-y-3 text-muted">
+        <li><a href="#" class="hover:text-text">Volunteering</a></li>
+        <li><a href="#" class="hover:text-text">Fellowship</a></li>
+        <li><a href="#" class="hover:text-text">Internship</a></li>
+        <li><a href="#" class="hover:text-text">Work</a></li>
+        <li><a href="#" class="hover:text-text">CSR Partnership</a></li>
+        <li><a href="#" class="hover:text-text">Donate</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-gold font-bold text-lg">Where we are</h3>
+      <address class="mt-4 not-italic text-muted leading-relaxed">8/1, Gover Road,<br>Cox Town, Bangalore<br>560 005</address>
+    </div>
+    <div>
+      <h3 class="text-gold font-bold text-lg">Get in touch</h3>
+      <!-- Add phone number and email here -->
+    </div>
+  </div>
+  <p class="max-w-7xl mx-auto px-4 lg:px-12 mt-12 text-sm text-muted">© 2026 U&amp;I x Maho. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
