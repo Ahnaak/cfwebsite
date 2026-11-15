@@ -40,7 +40,7 @@ Notes:
 
 ## Add pictures
 Put files in `images/` with these names, or change the `src` in `index.html`:
-`logo.png` (optional), `hero.jpg`, `session-2.jpg`, `session-3.jpg`
+`logo.png` (optional), `hero.webp`, `session-2.webp`, `session-3.webp` (about 1000px wide, under 200 KB each, so the page loads fast)
 
 ## Before publishing
 - Stats, sponsor amounts and stories are placeholders. Replace them with confirmed facts.
