@@ -10,6 +10,12 @@ mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   mobileNav.classList.add('hidden'); mobileNav.classList.remove('flex');
 }));
 
+// "Choose this" on a sponsor tier pre-selects it in the contact form
+document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click', () => {
+  const sel = document.getElementById('q-interest');
+  if (sel) sel.value = a.dataset.plan;
+}));
+
 // Question form: front-end only for now (no backend connected yet)
 document.querySelectorAll('#question-form').forEach(form => {
   form.addEventListener('submit', e => {
