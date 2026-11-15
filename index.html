@@ -9,31 +9,31 @@
 <link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-bg text-white font-sans antialiased">
+<body class="bg-bg text-ink font-sans antialiased">
 
 <!-- Navbar -->
-<header class="fixed top-0 inset-x-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-line">
+<header class="fixed top-0 inset-x-0 z-50 bg-bg border-b border-line">
   <div class="wrap h-20 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3">
-      <img src="images/logo.png" alt="U&amp;I logo" class="h-12 w-auto" onerror="this.style.display='none'">
+      <img src="images/logo.png" alt="U&amp;I logo" class="h-12 w-12 rounded-full bg-red p-1 object-contain" onerror="this.style.display='none'">
       <span class="font-extrabold text-lg leading-tight">U&amp;I x Maho</span>
     </a>
-    <nav class="hidden xl:flex items-center gap-8 text-sm font-medium text-white/80">
-      <a href="#about" class="hover:text-violet">About</a>
-      <a href="#sponsor" class="hover:text-violet">Sponsor a boy</a>
-      <a href="#stories" class="hover:text-violet">Stories</a>
-      <a href="#testimonials" class="hover:text-violet">Testimonials</a>
-      <a href="#programs" class="hover:text-violet">What we do</a>
-      <a href="#contact" class="hover:text-violet">Contact</a>
+    <nav class="hidden xl:flex items-center gap-8 text-sm font-medium text-ink/80">
+      <a href="#about" class="hover:text-blue">About</a>
+      <a href="#sponsor" class="hover:text-blue">Sponsor a boy</a>
+      <a href="#stories" class="hover:text-blue">Stories</a>
+      <a href="#testimonials" class="hover:text-blue">Testimonials</a>
+      <a href="#programs" class="hover:text-blue">What we do</a>
+      <a href="#contact" class="hover:text-blue">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="#sponsor" class="rounded-full bg-gold text-on-gold font-bold text-sm px-5 py-2 hover:brightness-110">Sponsor now</a>
+      <a href="#sponsor" class="bg-yellow text-ink font-bold text-sm px-4 py-2 whitespace-nowrap hover:brightness-105">Sponsor now</a>
       <button id="menu-btn" class="xl:hidden p-2" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-  <nav id="mobile-nav" class="hidden xl:hidden wrap pb-4 flex-col gap-3 text-white/80 font-medium">
+  <nav id="mobile-nav" class="hidden xl:hidden wrap pb-4 flex-col gap-3 text-ink/80 font-medium">
     <a href="#about">About</a><a href="#sponsor">Sponsor a boy</a><a href="#stories">Stories</a><a href="#testimonials">Testimonials</a><a href="#programs">What we do</a><a href="#contact">Contact</a>
   </nav>
 </header>
@@ -43,14 +43,14 @@
   <!-- Hero: one fixed photo -->
   <section class="wrap section grid lg:grid-cols-2 gap-12 items-center">
     <div>
-      <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">Nurturing potential in every boy at <span class="text-violet">U&amp;I x Maho</span></h1>
-      <p class="mt-6 text-white/85 text-lg max-w-xl">Your sponsorship pays for 1-on-1 mentorship, academic guidance and a steady, caring presence for boys growing up in residential care.</p>
+      <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">Nurturing potential in every boy at <span class="text-red">U&amp;I x Maho</span></h1>
+      <p class="mt-6 text-ink/85 text-lg max-w-xl">Your sponsorship pays for 1-on-1 mentorship, academic guidance and a steady, caring presence for boys growing up in residential care.</p>
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#sponsor" class="btn btn-gold">Sponsor a boy</a>
+        <a href="#sponsor" class="btn btn-yellow">Sponsor a boy</a>
         <a href="#about" class="btn btn-outline">Learn more</a>
       </div>
     </div>
-    <div class="rounded-2xl overflow-hidden bg-surface border border-line">
+    <div class="overflow-hidden bg-surface border border-line">
       <img src="images/hero.webp" fetchpriority="high" alt="A volunteer mentor working through a workbook with boys at the shelter home" class="w-full h-[320px] lg:h-[460px] object-cover" onerror="this.style.display='none'">
     </div>
   </section>
@@ -60,16 +60,16 @@
     <div class="wrap">
       <div class="grid lg:grid-cols-2 gap-12">
         <h2 class="h2">What is Maho?</h2>
-        <div class="space-y-6 text-white text-lg max-w-prose">
+        <div class="space-y-6 text-ink text-lg max-w-prose">
           <p>U&amp;I is a volunteer-driven NGO transforming lives through education. We work with children from underserved communities, providing after-school learning support, life skills training, and career guidance to help them break the cycle of poverty.</p>
           <p>Maho is a community-driven center under U&amp;I, dedicated to empowering underserved children through education and mentorship. We spend 3 hours a week providing quality after-school care, holistic development opportunities, and a nurturing environment to help the children realize their full potential.</p>
         </div>
       </div>
       <!-- TODO: replace placeholder stats with confirmed numbers -->
-      <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="card text-center"><p class="text-5xl font-extrabold text-violet">35+</p><p class="mt-2 font-semibold">Teaching volunteers</p></div>
-        <div class="card text-center"><p class="text-5xl font-extrabold text-violet">35+</p><p class="mt-2 font-semibold">Boys supported</p></div>
-        <div class="card text-center"><p class="text-5xl font-extrabold text-violet">80+</p><p class="mt-2 font-semibold">Hours spent</p></div>
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t-2 border-ink pt-8">
+        <div><p class="text-6xl lg:text-7xl font-extrabold text-blue leading-none">35+</p><p class="mt-3 text-sm font-bold uppercase tracking-wide">Teaching volunteers</p></div>
+        <div><p class="text-6xl lg:text-7xl font-extrabold text-blue leading-none">35+</p><p class="mt-3 text-sm font-bold uppercase tracking-wide">Boys supported</p></div>
+        <div><p class="text-6xl lg:text-7xl font-extrabold text-blue leading-none">80+</p><p class="mt-3 text-sm font-bold uppercase tracking-wide">Hours spent</p></div>
       </div>
     </div>
   </section>
@@ -80,27 +80,33 @@
       <h2 class="h2">Sponsor a boy's future</h2>
       <p class="lead">Every contribution goes straight into the sessions, materials and mentors a boy needs. Choose a way to give.</p>
       <!-- TODO: replace sample amounts and what each covers with confirmed figures -->
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <article class="card flex flex-col">
           <h3 class="text-xl font-bold">Learning kit</h3>
-          <p class="mt-3 text-4xl font-extrabold text-violet">₹1,500</p>
-          <p class="mt-3 text-white/85 flex-1">Books, stationery and workbooks for one boy for a term.</p>
-          <a href="#contact" data-plan="Learning kit" class="btn btn-gold mt-6 text-center">Choose this</a>
+          <p class="mt-3 text-4xl font-extrabold text-blue">₹1,500</p>
+          <p class="mt-3 text-ink/85 flex-1">Books, stationery and workbooks for one boy for a term.</p>
+          <a href="#contact" data-plan="Learning kit" class="btn btn-yellow mt-6 text-center">Choose this</a>
         </article>
-        <article class="card flex flex-col border-violet">
+        <article class="card flex flex-col border-2 border-blue">
           <h3 class="text-xl font-bold">Sponsor a mentor year</h3>
-          <p class="mt-3 text-4xl font-extrabold text-violet">₹12,000</p>
-          <p class="mt-3 text-white/85 flex-1">A year of weekly 1-on-1 mentoring and academic support for one boy.</p>
-          <a href="#contact" data-plan="Mentor year" class="btn btn-gold mt-6 text-center">Choose this</a>
+          <p class="mt-3 text-4xl font-extrabold text-blue">₹12,000</p>
+          <p class="mt-3 text-ink/85 flex-1">A year of weekly 1-on-1 mentoring and academic support for one boy.</p>
+          <a href="#contact" data-plan="Mentor year" class="btn btn-yellow mt-6 text-center">Choose this</a>
         </article>
         <article class="card flex flex-col">
           <h3 class="text-xl font-bold">Life skills program</h3>
-          <p class="mt-3 text-4xl font-extrabold text-violet">₹50,000</p>
-          <p class="mt-3 text-white/85 flex-1">Workshops, sports and career readiness for a whole group. Ideal for CSR and corporate partners.</p>
-          <a href="#contact" data-plan="Life skills program" class="btn btn-gold mt-6 text-center">Choose this</a>
+          <p class="mt-3 text-4xl font-extrabold text-blue">₹50,000</p>
+          <p class="mt-3 text-ink/85 flex-1">Workshops, sports and career readiness for a whole group. Ideal for CSR and corporate partners.</p>
+          <a href="#contact" data-plan="Life skills program" class="btn btn-yellow mt-6 text-center">Choose this</a>
+        </article>
+        <article class="card flex flex-col">
+          <h3 class="text-xl font-bold">Your own amount</h3>
+          <p class="mt-3 text-4xl font-extrabold text-blue">You choose</p>
+          <p class="mt-3 text-ink/85 flex-1">Give any amount that works for you. Tell us in the form and we will get in touch to set it up.</p>
+          <a href="#contact" data-plan="Custom amount" class="btn btn-yellow mt-6 text-center">Choose this</a>
         </article>
       </div>
-      <p class="mt-6 text-sm text-white/70">Prefer a different amount or a recurring gift? Use the form below and we will get in touch.</p>
+      <p class="mt-6 text-sm text-ink/70">Prefer a recurring gift? Use the form below and we will get in touch.</p>
     </div>
   </section>
 
@@ -112,46 +118,46 @@
       <!-- TODO: real stories only, with the shelter's consent. Keep children's faces covered or cropped. -->
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">1</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">1</div>
           <h3 class="mt-5 text-xl font-bold">Story title one</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">2</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">2</div>
           <h3 class="mt-5 text-xl font-bold">Story title two</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">3</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">3</div>
           <h3 class="mt-5 text-xl font-bold">Story title three</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">4</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">4</div>
           <h3 class="mt-5 text-xl font-bold">Story title four</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">5</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">5</div>
           <h3 class="mt-5 text-xl font-bold">Story title five</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
         <article class="card flex flex-col items-center text-center">
-          <div class="h-24 w-24 rounded-full bg-brand flex items-center justify-center text-3xl font-extrabold">6</div>
+          <div class="h-24 w-24 rounded-full bg-red text-white flex items-center justify-center text-3xl font-extrabold">6</div>
           <h3 class="mt-5 text-xl font-bold">Story title six</h3>
-          <p class="mt-2 text-white/85">A short line about this boy's progress goes here.</p>
+          <p class="mt-2 text-ink/85">A short line about this boy's progress goes here.</p>
         </article>
       </div>
 
-      <h3 class="mt-16 text-2xl font-bold text-violet">Sessions in pictures</h3>
+      <h3 class="mt-16 text-2xl font-bold text-blue">Sessions in pictures</h3>
       <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <figure class="rounded-2xl overflow-hidden bg-bg border border-line">
+        <figure class="overflow-hidden bg-white border border-line">
           <img src="images/session-2.webp" alt="A volunteer helping a boy with his work on the shelter steps" class="w-full h-72 lg:h-96 object-cover" loading="lazy">
-          <figcaption class="p-4 text-sm text-white/80">One-on-one reading and writing practice</figcaption>
+          <figcaption class="p-4 text-sm text-ink/80">One-on-one reading and writing practice</figcaption>
         </figure>
-        <figure class="rounded-2xl overflow-hidden bg-bg border border-line">
+        <figure class="overflow-hidden bg-white border border-line">
           <img src="images/session-3.webp" alt="A volunteer working with boys on a workbook in the shelter courtyard" class="w-full h-72 lg:h-96 object-cover" loading="lazy">
-          <figcaption class="p-4 text-sm text-white/80">Small-group study in the courtyard</figcaption>
+          <figcaption class="p-4 text-sm text-ink/80">Small-group study in the courtyard</figcaption>
         </figure>
       </div>
     </div>
@@ -166,15 +172,15 @@
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <figure class="vcard">
           <blockquote class="text-sm leading-relaxed flex-1">Add a short quote from a volunteer here.</blockquote>
-          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white/80">Volunteer, 2024–2025</span></figcaption>
+          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white">Volunteer, 2024–2025</span></figcaption>
         </figure>
         <figure class="vcard">
           <blockquote class="text-sm leading-relaxed flex-1">Add a short quote from a volunteer here.</blockquote>
-          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white/80">Volunteer, 2024–2025</span></figcaption>
+          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white">Volunteer, 2024–2025</span></figcaption>
         </figure>
         <figure class="vcard">
           <blockquote class="text-sm leading-relaxed flex-1">Add a short quote from a sponsor or student here.</blockquote>
-          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white/80">Role, 2024–2025</span></figcaption>
+          <figcaption class="mt-6"><span class="block font-semibold">Name</span><span class="block text-xs text-white">Role, 2024–2025</span></figcaption>
         </figure>
       </div>
     </div>
@@ -185,20 +191,23 @@
     <div class="wrap">
       <h2 class="h2">See what we do</h2>
       <p class="lead">Three areas of work that help boys heal, learn and prepare for independent life.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <article class="card bg-bg">
-          <h3 class="text-xl font-bold">Academic foundation and STEM</h3>
-          <p class="mt-3 text-white/85">Closing literacy and numeracy gaps with hands-on science, circuit kits, computer basics and personal study plans.</p>
-        </article>
-        <article class="card bg-bg">
-          <h3 class="text-xl font-bold">Emotional resilience and confidence</h3>
-          <p class="mt-3 text-white/85">Safe, judgment-free sessions where boys learn to put feelings into words and support each other.</p>
-        </article>
-        <article class="card bg-bg">
-          <h3 class="text-xl font-bold">Life skills and vocational readiness</h3>
-          <p class="mt-3 text-white/85">Football, spoken English, budgeting and trade apprenticeships for older boys preparing to leave the shelter.</p>
-        </article>
-      </div>
+      <ol class="mt-10 border-t-2 border-ink">
+        <li class="grid md:grid-cols-12 gap-2 md:gap-8 py-8 border-b border-ink/20">
+          <span class="md:col-span-2 text-4xl font-extrabold text-red leading-none" aria-hidden="true">01</span>
+          <h3 class="md:col-span-4 text-xl font-bold">Academic foundation and STEM</h3>
+          <p class="md:col-span-6 text-ink/85">Closing literacy and numeracy gaps with hands-on science, circuit kits, computer basics and personal study plans.</p>
+        </li>
+        <li class="grid md:grid-cols-12 gap-2 md:gap-8 py-8 border-b border-ink/20">
+          <span class="md:col-span-2 text-4xl font-extrabold text-red leading-none" aria-hidden="true">02</span>
+          <h3 class="md:col-span-4 text-xl font-bold">Emotional resilience and confidence</h3>
+          <p class="md:col-span-6 text-ink/85">Safe, judgment-free sessions where boys learn to put feelings into words and support each other.</p>
+        </li>
+        <li class="grid md:grid-cols-12 gap-2 md:gap-8 py-8 border-b border-ink/20">
+          <span class="md:col-span-2 text-4xl font-extrabold text-red leading-none" aria-hidden="true">03</span>
+          <h3 class="md:col-span-4 text-xl font-bold">Life skills and vocational readiness</h3>
+          <p class="md:col-span-6 text-ink/85">Football, spoken English, budgeting and trade apprenticeships for older boys preparing to leave the shelter.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -206,23 +215,23 @@
   <section id="contact" class="section bg-bg">
     <div class="max-w-xl mx-auto px-4">
       <h2 class="h2 text-center">Got a question or want to sponsor?</h2>
-      <p class="mt-4 text-white/85 text-center">Fill out this quick form and we will get back to you.</p>
+      <p class="mt-4 text-ink/85 text-center">Fill out this quick form and we will get back to you.</p>
       <form id="question-form" class="mt-10 flex flex-col gap-5">
         <div><label for="q-name" class="block mb-2 font-semibold">Full name*</label>
-          <input id="q-name" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-name" required class="w-full bg-white text-ink border border-ink/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue"></div>
         <div><label for="q-email" class="block mb-2 font-semibold">Email address*</label>
-          <input id="q-email" type="email" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-email" type="email" required class="w-full bg-white text-ink border border-ink/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue"></div>
         <div><label for="q-phone" class="block mb-2 font-semibold">Contact number*</label>
-          <input id="q-phone" type="tel" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-phone" type="tel" required class="w-full bg-white text-ink border border-ink/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue"></div>
         <div><label for="q-interest" class="block mb-2 font-semibold">I am interested in*</label>
-          <select id="q-interest" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet">
+          <select id="q-interest" required class="w-full bg-white text-ink border border-ink/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue">
             <option>Learning kit</option><option>Mentor year</option><option>Life skills program</option>
-            <option>CSR partnership</option><option>Volunteering</option><option>Just a question</option>
+            <option>Custom amount</option><option>CSR partnership</option><option>Volunteering</option><option>Just a question</option>
           </select></div>
         <div><label for="q-text" class="block mb-2 font-semibold">Message*</label>
-          <textarea id="q-text" rows="4" required class="w-full bg-white text-bg rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-violet"></textarea></div>
-        <button class="btn btn-gold">Submit</button>
-        <p class="form-status hidden text-center text-gold font-semibold" role="status">Thank you! We will be in touch soon.</p>
+          <textarea id="q-text" rows="4" required class="w-full bg-white text-ink border border-ink/50 p-4 focus:outline-none focus:ring-2 focus:ring-blue"></textarea></div>
+        <button class="btn btn-yellow">Submit</button>
+        <p class="form-status hidden text-center text-blue font-semibold" role="status">Thank you! We will be in touch soon.</p>
       </form>
     </div>
   </section>
@@ -231,33 +240,33 @@
 <footer class="bg-surface border-t border-line pt-14 pb-8">
   <div class="wrap grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
-      <img src="images/logo.png" alt="U&amp;I, be the change" class="h-24 w-auto" onerror="this.style.display='none'">
+      <img src="images/logo.png" alt="U&amp;I, be the change" class="h-24 w-24 rounded-full bg-red p-2 object-contain" onerror="this.style.display='none'">
       <div class="mt-5 flex gap-4">
-        <a href="#" aria-label="Facebook" class="hover:text-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="#" aria-label="Instagram" class="hover:text-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-        <a href="#" aria-label="LinkedIn" class="hover:text-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="#" aria-label="YouTube" class="hover:text-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+        <a href="#" aria-label="Facebook" class="hover:text-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="hover:text-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="YouTube" class="hover:text-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
       </div>
-      <p class="mt-5 text-sm text-white/75 max-w-xs">U&amp;I Trust is dedicated to transforming lives through education, empowerment, and volunteer-driven impact.</p>
+      <p class="mt-5 text-sm text-ink/75 max-w-xs">U&amp;I Trust is dedicated to transforming lives through education, empowerment, and volunteer-driven impact.</p>
     </div>
     <div>
-      <h3 class="text-violet font-bold text-lg">What we do</h3>
-      <ul class="mt-4 space-y-3 text-white/80">
-        <li><a href="#contact" class="hover:text-white">Volunteering</a></li>
-        <li><a href="#contact" class="hover:text-white">CSR Partnership</a></li>
-        <li><a href="#sponsor" class="hover:text-white">Sponsor a boy</a></li>
+      <h3 class="text-blue font-bold text-lg">What we do</h3>
+      <ul class="mt-4 space-y-3 text-ink/80">
+        <li><a href="#contact" class="hover:text-ink">Volunteering</a></li>
+        <li><a href="#contact" class="hover:text-ink">CSR Partnership</a></li>
+        <li><a href="#sponsor" class="hover:text-ink">Sponsor a boy</a></li>
       </ul>
     </div>
     <div>
-      <h3 class="text-violet font-bold text-lg">Where we are</h3>
-      <address class="mt-4 not-italic text-white/80 leading-relaxed">8/1, Gover Road,<br>Cox Town, Bangalore<br>560 005</address>
+      <h3 class="text-blue font-bold text-lg">Where we are</h3>
+      <address class="mt-4 not-italic text-ink/80 leading-relaxed">8/1, Gover Road,<br>Cox Town, Bangalore<br>560 005</address>
     </div>
     <div>
-      <h3 class="text-violet font-bold text-lg">Get in touch</h3>
+      <h3 class="text-blue font-bold text-lg">Get in touch</h3>
       <!-- TODO: add the NGO's phone number and email here -->
     </div>
   </div>
-  <p class="wrap mt-12 text-sm text-white/70">© 2026 U&amp;I x Maho. All rights reserved.</p>
+  <p class="wrap mt-12 text-sm text-ink/70">© 2026 U&amp;I x Maho. All rights reserved.</p>
 </footer>
 
 <script src="js/main.js"></script>
