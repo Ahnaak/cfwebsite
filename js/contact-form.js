@@ -26,10 +26,12 @@
     timeout: "Sending is taking too long. Please check your connection and try again.",
   };
 
+  // The message uses the page's normal text colour, so it stays readable whatever the palette.
+  // To style it, use the state in CSS, e.g. .form-status[data-state="error"] { ... }
   function show(text, ok) {
     status.textContent = text;
-    status.classList.remove("hidden", "text-gold", "text-white");
-    status.classList.add(ok ? "text-gold" : "text-white");
+    status.dataset.state = ok ? "sent" : "error";
+    status.classList.remove("hidden");
   }
 
   let sending = false;
