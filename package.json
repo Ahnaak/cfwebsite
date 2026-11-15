@@ -1,0 +1,22 @@
+{
+  "name": "cfwebsite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "U&I x Maho sponsor website (static site, built with Tailwind CSS).",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/build.mjs && node scripts/serve.mjs dist 8000 /cfwebsite/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahnaak/cfwebsite.git"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.19"
+  }
+}
