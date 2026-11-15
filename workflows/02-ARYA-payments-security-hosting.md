@@ -22,10 +22,13 @@ Do not edit: body content, copy, images (Ahna). Ask first.
 - **Tell Ahna** when merged; she rebases.
 
 ### PR 2: `arya/deploy-pages`
-- [ ] `.github/workflows/deploy.yml`: on push to `main`: checkout, setup-node, `npm ci`, `npm run build`, upload `dist/` with `actions/upload-pages-artifact`, deploy with `actions/deploy-pages`. Pin actions by version/SHA.
-- [ ] Minimal permissions block (`contents: read`, `pages: write`, `id-token: write`).
-- [ ] Confirm it works at `https://ahnaak.github.io/cfwebsite/` (relative paths!). Fix any absolute path.
-- [ ] Add a PR check workflow that builds on every pull request.
+- [x] `.github/workflows/deploy.yml`: on push to `main`: checkout, setup-node, `npm ci`, `npm run build`, `npm run check`, upload `dist/` with `actions/upload-pages-artifact`, deploy with `actions/deploy-pages`. Actions pinned to commit SHAs.
+- [x] Minimal permissions block (`contents: read`, `pages: write`, `id-token: write`); checkout does not keep credentials.
+- [x] `scripts/check.mjs` (`npm run check`): fails on broken file links, root-absolute paths (break on `/cfwebsite/`), files loaded from other websites, `http://` and `javascript:` links; warns on inline JavaScript.
+- [x] `.github/workflows/pr-check.yml`: builds, runs `npm audit` and `npm run check` on every pull request.
+- [ ] Repo owner sets Settings > Pages > Source = **GitHub Actions** (needs admin).
+- [ ] After merge: confirm it works at `https://ahnaak.github.io/cfwebsite/`.
+- [ ] Repo owner adds "build-and-check" as a required status check in the `main` branch rule.
 
 ### PR 3: `arya/payments`  (blocking: needs the NGO's documents)
 - [ ] Choose provider (Razorpay is common in India; Payment Pages/Links need no server). Requirements from the NGO: registration certificate, PAN, bank account, 80G/12A, authorised signatory ID.

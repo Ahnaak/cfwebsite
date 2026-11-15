@@ -15,6 +15,12 @@ Sponsor/donation website for U&I x Maho. Static site styled with Tailwind CSS. T
 | `npm run dev` | Starts the site at http://localhost:8000 and rebuilds the styles every time you save. Use this while working. Stop it with Ctrl+C. |
 | `npm run build` | Makes the final website in the `dist/` folder. This is what gets published. |
 | `npm run preview` | Builds, then serves `dist/` at http://localhost:8000/cfwebsite/, the same address shape as GitHub Pages. Use it to check nothing breaks before a PR. |
+| `npm run check` | After a build, checks for broken file links, paths that would break on GitHub Pages, files loaded from other websites, and insecure links. The same check runs automatically on every PR. |
+
+## How publishing works
+- Every pull request is built and checked automatically (`.github/workflows/pr-check.yml`). A red cross on the PR means something is broken: open the "Details" link to see what.
+- Every merge into `main` publishes the site to GitHub Pages automatically (`.github/workflows/deploy.yml`). Nothing needs uploading by hand.
+- One-time setup by the repo owner: **Settings > Pages > Source = GitHub Actions**.
 
 ## Where things live
 | Path | What | Owner |
@@ -25,6 +31,7 @@ Sponsor/donation website for U&I x Maho. Static site styled with Tailwind CSS. T
 | `index.html` `<head>`, `js/` | Security tags, form and payment code | Arya |
 | `tailwind.config.js` | Colours and font (the design system) | Arya, changes agreed with Ahna |
 | `src/input.css`, `src/fonts.css`, `fonts/`, `scripts/`, `package.json` | Build setup and self-hosted font | Arya |
+| `.github/workflows/` | Automatic checks and publishing | Arya |
 
 Notes:
 - `css/styles.css` and `dist/` are generated. Don't edit them, and don't commit them (git ignores them).
