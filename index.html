@@ -207,22 +207,30 @@
     <div class="max-w-xl mx-auto px-4">
       <h2 class="h2 text-center">Got a question or want to sponsor?</h2>
       <p class="mt-4 text-white/85 text-center">Fill out this quick form and we will get back to you.</p>
-      <form id="question-form" class="mt-10 flex flex-col gap-5">
+      <!-- Messages are sent to Formspree (free plan), which emails them to the NGO. Owner: Arya.
+           To connect: replace REPLACE_WITH_FORM_ID with the form ID from the Formspree dashboard. -->
+      <form id="question-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" class="mt-10 flex flex-col gap-5">
         <div><label for="q-name" class="block mb-2 font-semibold">Full name*</label>
-          <input id="q-name" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-name" name="name" autocomplete="name" required maxlength="100" class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
         <div><label for="q-email" class="block mb-2 font-semibold">Email address*</label>
-          <input id="q-email" type="email" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-email" name="email" type="email" autocomplete="email" required maxlength="254" class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
         <div><label for="q-phone" class="block mb-2 font-semibold">Contact number*</label>
-          <input id="q-phone" type="tel" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
+          <input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required minlength="7" maxlength="20" pattern="[0-9+\(\)\- ]{7,20}" title="Digits, spaces, +, - and brackets only" class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet"></div>
         <div><label for="q-interest" class="block mb-2 font-semibold">I am interested in*</label>
-          <select id="q-interest" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet">
+          <select id="q-interest" name="interest" required class="w-full bg-white text-bg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet">
             <option>Learning kit</option><option>Mentor year</option><option>Life skills program</option>
             <option>CSR partnership</option><option>Volunteering</option><option>Just a question</option>
           </select></div>
         <div><label for="q-text" class="block mb-2 font-semibold">Message*</label>
-          <textarea id="q-text" rows="4" required class="w-full bg-white text-bg rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-violet"></textarea></div>
-        <button class="btn btn-gold">Submit</button>
-        <p class="form-status hidden text-center text-gold font-semibold" role="status">Thank you! We will be in touch soon.</p>
+          <textarea id="q-text" name="message" rows="4" required maxlength="2000" class="w-full bg-white text-bg rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-violet"></textarea></div>
+        <!-- Spam trap: hidden from people (and screen readers); bots fill it in. It is never sent. -->
+        <div class="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+          <label for="q-website">Leave this empty</label>
+          <input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="text-sm text-white/70">We only use these details to reply to you. They are sent securely to our form provider, Formspree, which emails them to our team.</p>
+        <button type="submit" class="btn btn-gold disabled:opacity-60 disabled:cursor-wait">Submit</button>
+        <p class="form-status hidden text-center font-semibold" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -261,5 +269,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>

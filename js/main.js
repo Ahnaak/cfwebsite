@@ -16,11 +16,4 @@ document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click'
   if (sel) sel.value = a.dataset.plan;
 }));
 
-// Question form: front-end only for now (no backend connected yet)
-document.querySelectorAll('#question-form').forEach(form => {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    form.querySelector('.form-status').classList.remove('hidden');
-    form.reset();
-  });
-});
+// Contact form sending lives in js/contact-form.js

@@ -79,6 +79,9 @@ for (const file of files) {
       const handlers = Object.keys(attr).filter((a) => /^on[a-z]+$/.test(a));
       if (handlers.length) warnings.push(`${rel(file)}: <${t} ${handlers.join(" ")}="..."> is inline JavaScript; a strict security policy (PR 5) will block it.`);
     }
+    if (html.includes("REPLACE_WITH")) {
+      warnings.push(`${rel(file)}: still contains a REPLACE_WITH placeholder (e.g. the contact form isn't connected to Formspree yet).`);
+    }
     for (const m of html.matchAll(/<script\b(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)) {
       if (m[1].trim()) warnings.push(`${rel(file)}: inline <script> block; move it into a file in js/ before PR 5.`);
     }
