@@ -1,6 +1,7 @@
 # Ahna: front end, content, design
 
-You own what visitors see and read. Branch names: `ahna/<topic>`. Files: `index.html` body sections, `images/`, `css/`, copy.
+You own what visitors see and read. Branch names: `ahna/<topic>`. Files: `index.html` body sections, `images/`, `src/components.css` (shared styles), copy.
+Run the site with `npm install` once, then `npm run dev` (see README.md). Don't edit `css/styles.css`; it is generated.
 Do not edit: `<head>` security tags, `js/` payment/form code, `.github/`, legal pages (Arya). Ask first.
 
 ---

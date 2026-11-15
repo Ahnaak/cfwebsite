@@ -1,0 +1,9 @@
+# Same line endings on Windows and Mac, so diffs only show real changes
+* text=auto eol=lf
+
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary

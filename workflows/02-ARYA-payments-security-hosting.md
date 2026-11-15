@@ -11,12 +11,13 @@ Do not edit: body content, copy, images (Ahna). Ask first.
 ## Sprint 1: build, deploy, payments (days 1 to 5)
 
 ### PR 1: `arya/build-pipeline`  (do this first; it unblocks everything)
-- [ ] `npm init -y`, then `npm i -D tailwindcss@3` (pin the version).
-- [ ] Create `tailwind.config.js` (move the colour/font config out of the inline `<script>` in `index.html`) and `src/input.css` with the `@tailwind` directives plus the `.wrap/.section/.h2/.btn/.card/.vcard` helper styles currently in the page `<style>`.
-- [ ] Scripts: `"build"` outputs minified CSS to `dist/`, copying `index.html`, `js/`, `images/` into `dist/`.
-- [ ] Remove `<script src="https://cdn.tailwindcss.com">`, link the built CSS (`css/styles.css`, relative path).
-- [ ] Self-host the Plus Jakarta Sans font (download the woff2 files, add `@font-face`); remove the Google Fonts links.
-- [ ] `.gitignore`: `node_modules/`, `dist/`.
+- [x] `npm init -y`, then `npm i -D tailwindcss@3` (pinned to 3.4.19).
+- [x] Create `tailwind.config.js` (colour/font config moved out of the inline `<script>`), `src/input.css` (entry), `src/fonts.css`, and `src/components.css` (the `.wrap/.section/.h2/.btn/.card/.vcard` helpers, owned by Ahna).
+- [x] Scripts: `npm run build` outputs minified CSS plus `index.html`, `js/`, `images/`, `fonts/` into `dist/`; `npm run dev` (watch + local server); `npm run preview` (serves `dist/` at `/cfwebsite/` like GitHub Pages).
+- [x] Remove `<script src="https://cdn.tailwindcss.com">`, link the built CSS (`css/styles.css`, relative path).
+- [x] Self-host the Plus Jakarta Sans font (variable woff2 in `fonts/`, OFL licence included); Google Fonts links removed.
+- [x] `.gitignore`: `node_modules/`, `dist/`, `css/styles.css`, `.env`. `.gitattributes` normalises line endings.
+- [ ] Follow-up for PR 5 (CSP): the `<img onerror="...">` attributes in the body are inline scripts and will be blocked by a strict CSP. Ask Ahna to remove them once the final images are in.
 - **Done when:** `npm run build` produces a `dist/` that looks identical to the current page with no external requests except payment/form providers.
 - **Tell Ahna** when merged; she rebases.
 

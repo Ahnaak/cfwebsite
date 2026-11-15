@@ -1,16 +1,42 @@
-# U&I x Maho website (base)
+# U&I x Maho website
 
-Small starting point built from a Google Stitch design.
+Sponsor/donation website for U&I x Maho. Static site styled with Tailwind CSS. Team plan: [WORKFLOW.md](WORKFLOW.md).
 
-## Run
-Open `index.html` in a browser (needs internet for Tailwind CDN and fonts).
+## First-time setup
+1. Install [Node.js](https://nodejs.org) version 20 or newer (the "LTS" download).
+2. In this folder run:
+   ```
+   npm install
+   ```
+
+## Everyday commands
+| Command | What it does |
+|---|---|
+| `npm run dev` | Starts the site at http://localhost:8000 and rebuilds the styles every time you save. Use this while working. Stop it with Ctrl+C. |
+| `npm run build` | Makes the final website in the `dist/` folder. This is what gets published. |
+| `npm run preview` | Builds, then serves `dist/` at http://localhost:8000/cfwebsite/, the same address shape as GitHub Pages. Use it to check nothing breaks before a PR. |
+
+## Where things live
+| Path | What | Owner |
+|---|---|---|
+| `index.html` `<body>` | Page content and layout | Ahna |
+| `src/components.css` | Shared building blocks (`.btn`, `.card`, `.section`...) | Ahna |
+| `images/` | Photos and logo | Ahna |
+| `index.html` `<head>`, `js/` | Security tags, form and payment code | Arya |
+| `tailwind.config.js` | Colours and font (the design system) | Arya, changes agreed with Ahna |
+| `src/input.css`, `src/fonts.css`, `fonts/`, `scripts/`, `package.json` | Build setup and self-hosted font | Arya |
+
+Notes:
+- `css/styles.css` and `dist/` are generated. Don't edit them, and don't commit them (git ignores them).
+- Use only **relative paths** (`images/hero.jpg`, not `/images/hero.jpg`) so the site works on GitHub Pages and on a custom domain.
+- Don't add scripts, fonts or embeds from other websites. Everything is self-hosted for security.
 
 ## Add pictures
 Put files in `images/` with these names, or change the `src` in `index.html`:
 `logo.png` (optional), `hero.jpg`, `session-2.jpg`, `session-3.jpg`
 
 ## Before publishing
-- Stats and programs are placeholders. Replace with confirmed facts.
+- Stats, sponsor amounts and stories are placeholders. Replace them with confirmed facts.
 - Testimonial cards are placeholders. Use real quotes with permission, and get the shelter's consent for anything from a child.
 - Only use photos of boys with consent from the shelter. Keep every child's face covered or cropped out.
-- The question form does not send data anywhere yet. Donate buttons link to `#` until a donation link is added.
+- The question form does not send data anywhere yet. Sponsor buttons link to the form until payment links are added.

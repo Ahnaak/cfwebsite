@@ -26,11 +26,11 @@ Goal: a sponsor/donation website that can be hosted on **GitHub Pages or a custo
 | Area | Owner |
 |---|---|
 | `index.html` body sections (hero, about, sponsor tiers, stories, testimonials, programs, footer) | **Ahna** |
-| `images/`, `css/` custom styles, responsive/accessibility fixes | **Ahna** |
+| `images/`, `src/components.css` shared styles, responsive/accessibility fixes | **Ahna** |
 | Content, copy, consent checks for photos/quotes | **Ahna** |
 | `index.html` `<head>` (CSP, meta), contact-form `action`, `js/` (form + payments) | **Arya** |
 | `donate.html`, `thank-you.html`, `privacy.html`, `terms.html`, `refund-policy.html` | **Arya** (copy reviewed by Ahna) |
-| `.github/workflows/`, `_headers`, `CNAME`, `package.json`, Tailwind build, `SECURITY.md`, `security.txt` | **Arya** |
+| `.github/workflows/`, `_headers`, `CNAME`, `package.json`, `tailwind.config.js`, `src/input.css`, `src/fonts.css`, `fonts/`, `scripts/`, `SECURITY.md`, `security.txt` | **Arya** |
 
 If you need to touch the other person's area, message first or open a PR into their branch.
 
