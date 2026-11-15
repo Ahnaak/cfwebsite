@@ -40,11 +40,13 @@ Do not edit: body content, copy, images (Ahna). Ask first.
 - **Done when:** a test payment completes in test mode and the receipt arrives.
 
 ### PR 4: `arya/contact-form`
-- [ ] Pick a form service (Formspree or Web3Forms). Set the form `action` and `method="POST"`.
-- [ ] Add a honeypot field (hidden, `tabindex="-1"`, `autocomplete="off"`).
-- [ ] Add Cloudflare Turnstile or hCaptcha.
-- [ ] Update `js/main.js` to submit with `fetch`, show success/failure messages, disable the button while sending, and handle network errors.
-- [ ] Do not put personal data in URLs or logs.
+- [x] Pick a form service: **Formspree free plan** (50 messages/month, built-in spam filter, free domain restriction, no third-party scripts on our page). Works the same on GitHub Pages and Vercel. Fallback if we outgrow it: Web3Forms free (250/month); only the form `action` changes.
+- [x] Form `action` + `method="POST"`; every field has a `name`, length limits, email/phone validation.
+- [x] Honeypot field `website` (off-screen, `aria-hidden`, `tabindex="-1"`, `autocomplete="off"`), checked in the browser and never sent.
+- [x] ~~Turnstile/hCaptcha~~: skipped for now. Both add third-party scripts, and Formspree's free spam filter plus domain restriction cover us. Revisit if spam gets through.
+- [x] `js/contact-form.js` submits with `fetch`: success/failure/offline/timeout messages, button disabled while sending, no double sends, provider errors shown as plain text, honest "not connected" message if the ID is missing.
+- [x] No personal data in URLs or console logs; no cookies sent.
+- [ ] **Connect:** create the Formspree form (NGO inbox), put its ID in the form `action`, send one test message, then turn on domain restriction for `ahnaak.github.io`.
 - **Done when:** a message reaches the NGO inbox, spam bot posts are rejected.
 
 ---
@@ -52,7 +54,7 @@ Do not edit: body content, copy, images (Ahna). Ask first.
 ## Sprint 2: security hardening (days 6 to 10)
 
 ### PR 5: `arya/csp-headers`
-- [ ] Write a Content-Security-Policy that allows: `'self'` only, plus the payment provider, form service and Turnstile domains. No `unsafe-inline` or `unsafe-eval` (possible after PR 1).
+- [ ] Write a Content-Security-Policy that allows: `'self'` only, plus the payment provider and the form service (`connect-src https://formspree.io` and `form-action https://formspree.io`). No `unsafe-inline` or `unsafe-eval` (possible after PR 1).
 - [ ] GitHub Pages: add as `<meta http-equiv="Content-Security-Policy">` in `<head>` (note: `frame-ancestors` doesn't work in a meta tag).
 - [ ] Domain host: add `_headers` (Netlify/Cloudflare Pages) with:
   - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
