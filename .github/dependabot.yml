@@ -1,0 +1,40 @@
+# Dependabot opens a PR when one of our tools has an update or a security fix.
+# Owner: Arya. Every Dependabot PR still goes through the normal PR check and a human review.
+version: 2
+updates:
+  # The build tools in package.json (Tailwind)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Wait 7 days before suggesting a brand-new release, so a hijacked package
+    # is usually caught by others first. Security fixes are NOT delayed.
+    cooldown:
+      default-days: 7
+    groups:
+      npm-minor-and-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+    ignore:
+      # Tailwind 4 is a rewrite with a different setup; upgrade on purpose, not automatically.
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "deps"
+
+  # The GitHub Actions used in .github/workflows (pinned to exact commits)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns: ["*"]
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci"

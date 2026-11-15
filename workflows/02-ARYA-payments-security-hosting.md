@@ -69,11 +69,13 @@ Do not edit: body content, copy, images (Ahna). Ask first.
 - [ ] Contact details and grievance officer name if required by the provider.
 
 ### PR 7: `arya/repo-security`
-- [ ] `SECURITY.md` (how to report issues) and `.well-known/security.txt`.
-- [ ] Dependabot config for npm and GitHub Actions (`.github/dependabot.yml`).
-- [ ] Add a secret-scan step in CI (`gitleaks` action).
-- [ ] `npm audit --omit=dev` must pass in CI.
-- [ ] Add `rel="noopener noreferrer"` to all external links (coordinate with Ahna for the body links).
+- [x] `SECURITY.md` (private reporting, child-safety reports, rules for testers) and `.well-known/security.txt`; `npm run check` fails if it has expired and warns 30 days before.
+- [x] Dependabot for npm and GitHub Actions (`.github/dependabot.yml`): weekly, 7-day cooldown on new releases (security fixes not delayed), grouped, max 3 open PRs, no automatic Tailwind 4 jump.
+- [x] Secret scan in CI (`.github/workflows/secret-scan.yml`): TruffleHog (open source, no licence key, unlike gitleaks for organisations), pinned action and scanner version; runs on every PR, every push to main, and a weekly full-history scan.
+- [x] `npm audit --audit-level=high` already runs on every PR (PR 2).
+- [x] `.npmrc` `ignore-scripts=true`: packages can't run install scripts on our machines or in CI.
+- [x] `rel="noopener noreferrer"`: no external links yet; `npm run check` warns about any `target="_blank"` link without it.
+- [ ] **Repo owner (Ahna) turns on in Settings → Code security:** Private vulnerability reporting, Dependabot alerts + security updates, Secret scanning + Push protection. Then add **secret-scan** as a required check on `main`.
 
 ---
 

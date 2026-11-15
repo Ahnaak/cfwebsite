@@ -89,6 +89,18 @@ for (const file of files) {
   }
 }
 
+// security.txt must have a Contact and a future Expires date (RFC 9116)
+const securityTxt = join(dist, ".well-known", "security.txt");
+if (existsSync(securityTxt)) {
+  const txt = readFileSync(securityTxt, "utf8");
+  const expires = txt.match(/^Expires:\s*(.+)$/m);
+  const daysLeft = expires ? (Date.parse(expires[1].trim()) - Date.now()) / 86400000 : NaN;
+  if (!/^Contact:\s*\S+/m.test(txt)) errors.push(".well-known/security.txt has no Contact line.");
+  if (Number.isNaN(daysLeft)) errors.push(".well-known/security.txt needs a valid Expires date.");
+  else if (daysLeft < 0) errors.push(".well-known/security.txt has expired. Set Expires to a date up to a year ahead.");
+  else if (daysLeft < 30) warnings.push(`.well-known/security.txt expires in ${Math.floor(daysLeft)} days. Move Expires a year ahead.`);
+}
+
 for (const w of warnings) console.warn("warning: " + w);
 for (const e of errors) console.error("ERROR:   " + e);
 if (errors.length) {
