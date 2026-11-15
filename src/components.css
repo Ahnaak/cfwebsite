@@ -11,17 +11,17 @@
   .section { padding-block: 4rem; }
   @media (min-width: 1024px) { .section { padding-block: 6rem; } }
 
-  .h2 { font-size: 1.875rem; line-height: 1.2; font-weight: 800; color: theme("colors.violet"); }
+  .h2 { font-size: 1.875rem; line-height: 1.2; font-weight: 800; color: theme("colors.blue"); }
   @media (min-width: 1024px) { .h2 { font-size: 2.5rem; } }
 
-  .lead { margin-top: 1rem; color: #fff; opacity: .85; max-width: 42rem; }
+  .lead { margin-top: 1rem; color: theme("colors.ink"); opacity: .85; max-width: 42rem; }
 
-  .btn { display: inline-block; border-radius: .75rem; font-weight: 700; padding: 1rem 2rem; transition: filter .15s, background .15s; }
-  .btn-gold { background: theme("colors.gold"); color: theme("colors.on-gold"); }
-  .btn-gold:hover { filter: brightness(1.1); }
-  .btn-outline { border: 2px solid theme("colors.violet"); color: #fff; }
-  .btn-outline:hover { background: theme("colors.brand"); }
+  .btn { display: inline-block; border-radius: 0; font-weight: 700; padding: 1rem 2rem; transition: filter .15s, background .15s; }
+  .btn-yellow { background: theme("colors.yellow"); color: theme("colors.ink"); }
+  .btn-yellow:hover { filter: brightness(1.05); }
+  .btn-outline { border: 2px solid theme("colors.blue"); color: theme("colors.ink"); }
+  .btn-outline:hover { background: theme("colors.blue"); color: #fff; }
 
-  .card { background: theme("colors.surface"); border: 1px solid theme("colors.line"); border-radius: 1rem; padding: 2rem; }
-  .vcard { background: theme("colors.brand"); color: #fff; border-radius: 1rem; padding: 1.75rem; display: flex; flex-direction: column; }
+  .card { background: #fff; border: 1px solid theme("colors.line"); border-radius: 0; padding: 2rem; }
+  .vcard { background: theme("colors.red"); color: #fff; border-radius: 0; padding: 1.75rem; display: flex; flex-direction: column; }
 }
